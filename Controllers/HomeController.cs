@@ -8,7 +8,7 @@ using Image = Content_Delivery.Models.Image;
 namespace Content_Delivery.Controllers
 {
     [ApiController]
-    [Route("Resources")]
+    [Route("")]
     public class HomeController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
@@ -75,7 +75,7 @@ namespace Content_Delivery.Controllers
             return Ok(new
             {
                 message = "Image uploaded successfully.",
-                imageUrl = $"/Resources/{image.ShortUrl}"
+                imageUrl = $"/{image.ShortUrl}"
             });
         }
 
